@@ -1,5 +1,7 @@
-module.export = {
-  entry: './src/App.js',
+module.exports = {
+  entry: [
+    './src/App.js'
+  ],
   output: {
     path: __dirname,
     filename: 'app.js'
@@ -9,9 +11,12 @@ module.export = {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'babel',
+      exclude: /node_modules/,
       query: {
         presets: ['es2015', 'react']
       }
     }]
   }
-}
+};
+
+
